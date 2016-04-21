@@ -49,7 +49,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // MARK: UITableViewDelegate protocol methods
     // Method to be executed when a cell is selected
-    func tableView(tableView: UITableView, didselectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         performSegueWithIdentifier("cellSegue", sender: nil)
     }
     
@@ -59,9 +59,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     // Method to be called when the Delete button is pressed
+    
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
         if editingStyle == UITableViewCellEditingStyle.Delete {
+            
+            // Cancelling the local notifications
+            let item = itemArray[indexPath.row]
+            
+            // Cancelling if the same item has been already registered
+            for notification in UIApplication.sharedApplication().scheduledLocalNotifications! {
+                if notification.userInfo!["id"] as! Int == item.id {
+                    UIApplication.sharedApplication().cancelLocalNotification(notification)
+                    break
+                }
+            }
+            
             // Deleting from the DB
             try! realm.write {
                 self.realm.delete(self.itemArray[indexPath.row])
@@ -69,7 +82,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
         }
     }
-    
+ 
+ 
     // segue method
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         

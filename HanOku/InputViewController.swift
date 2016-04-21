@@ -41,10 +41,32 @@ class InputViewController: UIViewController {
             self.realm.add(self.item, update: true)
         }
         
+        setNotification(item)
+        
         super.viewWillDisappear(animated)
     }
     
     func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    func setNotification(item: Item) {
+        
+        // Cancelling if the same item has been already registered
+        for notification in UIApplication.sharedApplication().scheduledLocalNotifications! {
+            if notification.userInfo!["id"] as! Int == item.id {
+                UIApplication.sharedApplication().cancelLocalNotification(notification)
+                break
+            }
+        }
+        
+        let notification = UILocalNotification()
+        
+        // notification.fireDate =
+        notification.timeZone = NSTimeZone.defaultTimeZone()
+        notification.alertBody = "\(item.title)"
+        notification.soundName = UILocalNotificationDefaultSoundName
+        notification.userInfo = ["id":item.id]
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
 }

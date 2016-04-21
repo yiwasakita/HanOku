@@ -70,12 +70,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="hUm-FU-ve2" id="nnO-o9-0fw"/>
-                        <segue destination="C6q-bN-W2n" kind="show" identifier="cellSegue" id="ZfT-s1-VWf"/>
+                        <segue destination="C6q-bN-W2n" kind="show" identifier="cellSegue" id="LOA-sP-HPG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1117" y="352"/>
+            <point key="canvasLocation" x="1150" y="352"/>
         </scene>
         <!--Input View Controller-->
         <scene sceneID="tbr-PY-7Qv">
@@ -140,7 +140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C3w-Mn-Zb8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1787" y="352"/>
+            <point key="canvasLocation" x="1841" y="352"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZN8-i1-SHZ">
@@ -162,6 +162,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZfT-s1-VWf"/>
+        <segue reference="LOA-sP-HPG"/>
     </inferredMetricsTieBreakers>
 </document>

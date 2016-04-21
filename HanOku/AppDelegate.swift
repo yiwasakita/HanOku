@@ -16,7 +16,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Requesting the user permit the notification.
+        let settings = UIUserNotificationSettings(forTypes: [UIUserNotificationType.Alert, UIUserNotificationType.Sound], categories: nil)
+        UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+        
+        // Verifying if the app start is triggered by the notification
+        if let notification = launchOptions?[UIApplicationLaunchOptionsLocalNotificationKey] as? UILocalNotification {
+            // Canceling the notification
+            application.cancelLocalNotification(notification)
+        }
+        
         return true
+    }
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        
+        // If the notification is received while foreground
+        if application.applicationState == UIApplicationState.Active {
+            let alertController = UIAlertController(title: "Tentative Title", message: notification.alertBody, preferredStyle: .Alert)
+            let defaultAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            window?.rootViewController!.presentViewController(alertController, animated: true, completion: nil)
+        } else {
+            // If the notification is received while background
+            print("\(notification.alertBody)")
+        }
+        
+        // Canceling the notification
+        application.cancelLocalNotification(notification)
     }
 
     func applicationWillResignActive(application: UIApplication) {
