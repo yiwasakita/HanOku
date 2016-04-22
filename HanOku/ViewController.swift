@@ -13,12 +13,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var tableView: UITableView!
     
-    // Realm migration and acquireing a Realm instance.
+    // Realm migration
     let realm: Realm = {
         var config = Realm.Configuration(schemaVersion: 1)
         Realm.Configuration.defaultConfiguration = config
         return try! Realm()
-    } ()
+    }()
     
     // A list to store items from the DB
     var itemArray = try! Realm().objects(Item).sorted("id", ascending: false)
