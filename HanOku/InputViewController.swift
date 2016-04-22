@@ -13,19 +13,14 @@ class InputViewController: UIViewController {
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var detailTextView: UITextView!
-    @IBOutlet weak var datePicker: UIDatePicker!
-    
-    // Making the datePicker work just for the Time
-    func timePicker() { datePicker.datePickerMode = UIDatePickerMode.Time }
+    // @IBOutlet weak var datePicker: UIDatePicker!
     
     let realm = try! Realm()
     var item:Item!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        timePicker()
-        
+                
         // Calling the dismissKeyboard method when the background is tapped.
         
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(InputViewController.dismissKeyboard))
@@ -33,7 +28,7 @@ class InputViewController: UIViewController {
         
         titleTextField.text = item.title
         detailTextView.text = item.detail
-        datePicker.date = item.time
+        // datePicker.date = item.time
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,40 +40,16 @@ class InputViewController: UIViewController {
         try! realm.write {
             self.item.title = self.titleTextField.text!
             self.item.detail = self.detailTextView.text
-            self.item.time = self.datePicker.date
+            // self.item.time = self.datePicker.date
             self.realm.add(self.item, update: true)
         }
         
-        setNotification(item)
+        // setNotification(item)
         
         super.viewWillDisappear(animated)
     }
     
     func dismissKeyboard() {    
         view.endEditing(true)
-    }
-    
-    func setNotification(item: Item) {
-        
-        
-        // Cancelling if the same item has been already registered
-        /*
-        for notification in UIApplication.sharedApplication().scheduledLocalNotifications! {
-            if notification.userInfo!["id"] as! Int == item.id {
-                UIApplication.sharedApplication().cancelLocalNotification(notification)
-                break
-            }
-        }
-        */
-        
-        let notification = UILocalNotification()
-        
-        notification.fireDate = item.time
-        notification.repeatInterval = NSCalendarUnit.Minute // It should be .Day
-        notification.timeZone = NSTimeZone.defaultTimeZone()
-        notification.alertBody = "\(item.title)"
-        notification.soundName = UILocalNotificationDefaultSoundName
-        notification.userInfo = ["id":item.id]
-        UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
 }

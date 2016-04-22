@@ -160,7 +160,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="datePicker" destination="sjp-M8-n6n" id="vhJ-sH-myu"/>
                         <outlet property="detailTextView" destination="9Uy-Ae-zM1" id="hhB-xV-YGl"/>
                         <outlet property="titleTextField" destination="66H-RG-YYs" id="4oy-Xz-4TT"/>
                     </connections>
