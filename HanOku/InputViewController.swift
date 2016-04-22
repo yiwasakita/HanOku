@@ -13,12 +13,18 @@ class InputViewController: UIViewController {
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var detailTextView: UITextView!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    // Making the datePicker work just for the Time
+    func timePicker() { datePicker.datePickerMode = UIDatePickerMode.Time }
     
     let realm = try! Realm()
     var item:Item!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        timePicker()
         
         // Calling the dismissKeyboard method when the background is tapped.
         
@@ -27,6 +33,7 @@ class InputViewController: UIViewController {
         
         titleTextField.text = item.title
         detailTextView.text = item.detail
+        datePicker.date = item.time
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,6 +45,7 @@ class InputViewController: UIViewController {
         try! realm.write {
             self.item.title = self.titleTextField.text!
             self.item.detail = self.detailTextView.text
+            self.item.time = self.datePicker.date
             self.realm.add(self.item, update: true)
         }
         
@@ -62,7 +70,8 @@ class InputViewController: UIViewController {
         
         let notification = UILocalNotification()
         
-        // notification.fireDate =
+        notification.fireDate = item.time
+        notification.repeatInterval = NSCalendarUnit.NSMinuteCalendarUnit
         notification.timeZone = NSTimeZone.defaultTimeZone()
         notification.alertBody = "\(item.title)"
         notification.soundName = UILocalNotificationDefaultSoundName
