@@ -13,11 +13,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var tableView: UITableView!
     
-    // Acquiring a Realm instance
-    let realm = try! Realm()
+    // Realm migration
+    let realm: Realm = {
+        var config = Realm.Configuration(schemaVersion: 1)
+        Realm.Configuration.defaultConfiguration = config
+        return try! Realm()
+    }()
     
     // A list to store items from the DB
-    let itemArray = try! Realm().objects(Item).sorted("id", ascending: false)
+    var itemArray = try! Realm().objects(Item).sorted("id", ascending: false)
     
     override func viewDidLoad() {
         super.viewDidLoad()

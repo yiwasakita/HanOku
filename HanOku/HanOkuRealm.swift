@@ -13,6 +13,7 @@ class Item: Object {
     dynamic var id = 0
     dynamic var title = ""
     dynamic var detail = ""
+    dynamic var time = NSDate()
     
     // Setting "id" as the primary key
     override static func primaryKey() -> String? {
