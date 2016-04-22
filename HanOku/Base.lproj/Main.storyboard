@@ -121,46 +121,46 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="foj-7b-zL5">
-                                <rect key="frame" x="20" y="337" width="560" height="120"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="kgG-gv-cLR"/>
-                                </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="482985072.87426001">
-                                    <!--2016-04-22 02:31:12 +0000-->
-                                </date>
-                            </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert time アラート時刻設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfj-gg-cGX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert time アラート時刻設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghM-p4-Wty">
                                 <rect key="frame" x="20" y="306" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="sjp-M8-n6n">
+                                <rect key="frame" x="20" y="337" width="560" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="TLx-ie-QWG"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="483025524.55502099">
+                                    <!--2016-04-22 13:45:24 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="sjp-M8-n6n" firstAttribute="leading" secondItem="LjZ-Iu-T0L" secondAttribute="leadingMargin" id="5Kr-40-bd3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="66H-RG-YYs" secondAttribute="trailing" id="6sR-lc-qgI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="foj-7b-zL5" secondAttribute="trailing" id="ByF-kC-bbp"/>
+                            <constraint firstItem="sjp-M8-n6n" firstAttribute="top" secondItem="ghM-p4-Wty" secondAttribute="bottom" constant="10" id="A6e-QT-CXT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9Uy-Ae-zM1" secondAttribute="trailing" id="Ew4-gH-3Pf"/>
-                            <constraint firstItem="qfj-gg-cGX" firstAttribute="top" secondItem="9Uy-Ae-zM1" secondAttribute="bottom" constant="10" id="H22-Gc-iC1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="qfj-gg-cGX" secondAttribute="trailing" id="HXh-Kb-swx"/>
+                            <constraint firstItem="sjp-M8-n6n" firstAttribute="trailing" secondItem="LjZ-Iu-T0L" secondAttribute="trailingMargin" id="NTU-0d-SXa"/>
                             <constraint firstItem="66H-RG-YYs" firstAttribute="leading" secondItem="LjZ-Iu-T0L" secondAttribute="leadingMargin" id="UFN-bg-XtU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ghM-p4-Wty" secondAttribute="trailing" id="Unz-KM-hEi"/>
                             <constraint firstItem="66H-RG-YYs" firstAttribute="top" secondItem="KGC-hQ-3U4" secondAttribute="bottom" constant="10" id="WMI-Gg-idk"/>
-                            <constraint firstItem="foj-7b-zL5" firstAttribute="top" secondItem="qfj-gg-cGX" secondAttribute="bottom" constant="10" id="a1Y-HW-lfa"/>
+                            <constraint firstItem="ghM-p4-Wty" firstAttribute="leading" secondItem="LjZ-Iu-T0L" secondAttribute="leadingMargin" id="X4f-nu-26O"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KGC-hQ-3U4" secondAttribute="trailing" id="aXt-1q-oHF"/>
                             <constraint firstItem="dDG-s5-bxv" firstAttribute="leading" secondItem="LjZ-Iu-T0L" secondAttribute="leadingMargin" id="dVV-KK-hf5"/>
                             <constraint firstItem="9Uy-Ae-zM1" firstAttribute="top" secondItem="dDG-s5-bxv" secondAttribute="bottom" constant="10" id="een-OF-hNh"/>
-                            <constraint firstItem="foj-7b-zL5" firstAttribute="leading" secondItem="LjZ-Iu-T0L" secondAttribute="leadingMargin" id="fnV-Za-6sG"/>
                             <constraint firstItem="dDG-s5-bxv" firstAttribute="top" secondItem="66H-RG-YYs" secondAttribute="bottom" constant="10" id="iSl-uz-rHL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dDG-s5-bxv" secondAttribute="trailing" id="oZf-aN-p6u"/>
                             <constraint firstItem="9Uy-Ae-zM1" firstAttribute="leading" secondItem="LjZ-Iu-T0L" secondAttribute="leadingMargin" id="oi5-tG-691"/>
+                            <constraint firstItem="ghM-p4-Wty" firstAttribute="top" secondItem="9Uy-Ae-zM1" secondAttribute="bottom" constant="10" id="pB6-3M-NcH"/>
                             <constraint firstItem="KGC-hQ-3U4" firstAttribute="top" secondItem="8PN-DE-jRs" secondAttribute="bottom" constant="10" id="tHq-kL-p8a"/>
                             <constraint firstItem="KGC-hQ-3U4" firstAttribute="leading" secondItem="LjZ-Iu-T0L" secondAttribute="leadingMargin" id="vbZ-vV-Cdp"/>
-                            <constraint firstItem="qfj-gg-cGX" firstAttribute="leading" secondItem="LjZ-Iu-T0L" secondAttribute="leadingMargin" id="zuI-h0-6fr"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="datePicker" destination="foj-7b-zL5" id="YfT-Pm-qqR"/>
+                        <outlet property="datePicker" destination="sjp-M8-n6n" id="vhJ-sH-myu"/>
                         <outlet property="detailTextView" destination="9Uy-Ae-zM1" id="hhB-xV-YGl"/>
                         <outlet property="titleTextField" destination="66H-RG-YYs" id="4oy-Xz-4TT"/>
                     </connections>
@@ -180,8 +180,36 @@
                     <view key="view" contentMode="scaleToFill" id="5ag-Jf-vcy">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert time アラート時刻設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dn-ne-v4e">
+                                <rect key="frame" x="20" y="74" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="f3Q-EE-dt4">
+                                <rect key="frame" x="20" y="105" width="560" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="b8T-Xb-rz4"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="483024973.05808502">
+                                    <!--2016-04-22 13:36:13 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f3Q-EE-dt4" firstAttribute="leading" secondItem="5ag-Jf-vcy" secondAttribute="leadingMargin" id="Cer-Lz-ykT"/>
+                            <constraint firstItem="f3Q-EE-dt4" firstAttribute="top" secondItem="7dn-ne-v4e" secondAttribute="bottom" constant="10" id="O1a-O9-MzG"/>
+                            <constraint firstItem="7dn-ne-v4e" firstAttribute="top" secondItem="EKN-LH-lGC" secondAttribute="bottom" constant="10" id="XiO-wx-cKW"/>
+                            <constraint firstItem="7dn-ne-v4e" firstAttribute="leading" secondItem="5ag-Jf-vcy" secondAttribute="leadingMargin" id="cL0-UZ-6CJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7dn-ne-v4e" secondAttribute="trailing" id="giT-Ao-rr1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f3Q-EE-dt4" secondAttribute="trailing" id="ruw-D3-crt"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myDatePicker" destination="f3Q-EE-dt4" id="EgO-TA-k66"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBp-bq-DME" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
