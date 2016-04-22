@@ -21,20 +21,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let settings = UIUserNotificationSettings(forTypes: [UIUserNotificationType.Alert, UIUserNotificationType.Sound], categories: nil)
         UIApplication.sharedApplication().registerUserNotificationSettings(settings)
         
-        // Verifying if the app start is triggered by the notification
+        /* Verifying if the app start is triggered by the notification
         if let notification = launchOptions?[UIApplicationLaunchOptionsLocalNotificationKey] as? UILocalNotification {
             // Canceling the notification
             application.cancelLocalNotification(notification)
         }
-        
+        */
         return true
     }
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
         
         // If the notification is received while foreground
+        
         if application.applicationState == UIApplicationState.Active {
-            let alertController = UIAlertController(title: "Tentative Title", message: notification.alertBody, preferredStyle: .Alert)
+            let alertController = UIAlertController(title: "憶えた？", message: notification.alertBody, preferredStyle: .Alert)
             let defaultAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
             alertController.addAction(defaultAction)
             
@@ -45,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         // Canceling the notification
-        application.cancelLocalNotification(notification)
+        // application.cancelLocalNotification(notification)
     }
 
     func applicationWillResignActive(application: UIApplication) {
