@@ -70,7 +70,8 @@ class InputViewController: UIViewController {
         
         let notification = UILocalNotification()
         
-        // notification.fireDate =
+        notification.fireDate = item.time
+        notification.repeatInterval = NSCalendarUnit.NSMinuteCalendarUnit
         notification.timeZone = NSTimeZone.defaultTimeZone()
         notification.alertBody = "\(item.title)"
         notification.soundName = UILocalNotificationDefaultSoundName
