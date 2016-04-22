@@ -62,6 +62,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8S0-z5-M9X">
+                        <barButtonItem key="leftBarButtonItem" title="Set Time" id="5e8-gN-edU">
+                            <connections>
+                                <segue destination="gfd-VK-3xZ" kind="show" identifier="timesetSegue" id="eOc-Ec-vIH"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zWj-dJ-bUX">
                             <connections>
                                 <segue destination="C6q-bN-W2n" kind="show" id="dgZ-AN-3Zo"/>
@@ -163,6 +168,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C3w-Mn-Zb8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1841" y="352"/>
+        </scene>
+        <!--Timeset View Controller-->
+        <scene sceneID="HP8-8R-ATV">
+            <objects>
+                <viewController id="gfd-VK-3xZ" customClass="TimesetViewController" customModule="HanOku" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EKN-LH-lGC"/>
+                        <viewControllerLayoutGuide type="bottom" id="a4k-dB-dvl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5ag-Jf-vcy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jBp-bq-DME" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1841" y="1045"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZN8-i1-SHZ">

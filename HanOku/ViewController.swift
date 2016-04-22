@@ -91,19 +91,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // segue method
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let inputViewController:InputViewController = segue.destinationViewController as! InputViewController
-        
-        if segue.identifier == "cellSegue" {
-            let indexPath = self.tableView.indexPathForSelectedRow
-            inputViewController.item = itemArray[indexPath!.row]
+        if segue.identifier == "timesetSegue" {
+            
         } else {
-            let item = Item()
             
-            if itemArray.count != 0 {
-                item.id = itemArray.max("id")! + 1
+            let inputViewController:InputViewController = segue.destinationViewController as! InputViewController
+            
+            if segue.identifier == "cellSegue" {
+                let indexPath = self.tableView.indexPathForSelectedRow
+                inputViewController.item = itemArray[indexPath!.row]
+            } else {
+                let item = Item()
+                
+                if itemArray.count != 0 {
+                    item.id = itemArray.max("id")! + 1
+                }
+                
+                inputViewController.item = item
             }
-            
-            inputViewController.item = item
         }
     }
     

@@ -15,6 +15,7 @@
 		E283BF751CC8675C00925723 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E283BF741CC8675C00925723 /* Assets.xcassets */; };
 		E283BF781CC8675C00925723 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E283BF761CC8675C00925723 /* LaunchScreen.storyboard */; };
 		E2B08EE01CC87B92006B47C1 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B08EDF1CC87B92006B47C1 /* InputViewController.swift */; };
+		E2DF17F11CCA59EC007079D1 /* TimesetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DF17F01CCA59EC007079D1 /* TimesetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		E283BF771CC8675C00925723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E283BF791CC8675C00925723 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2B08EDF1CC87B92006B47C1 /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		E2DF17F01CCA59EC007079D1 /* TimesetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimesetViewController.swift; sourceTree = "<group>"; };
 		ECAF3E296418B565C1C97351 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 				E283BF761CC8675C00925723 /* LaunchScreen.storyboard */,
 				E283BF791CC8675C00925723 /* Info.plist */,
 				E22198AE1CC890B800F66E6D /* HanOkuRealm.swift */,
+				E2DF17F01CCA59EC007079D1 /* TimesetViewController.swift */,
 			);
 			path = HanOku;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2B08EE01CC87B92006B47C1 /* InputViewController.swift in Sources */,
+				E2DF17F11CCA59EC007079D1 /* TimesetViewController.swift in Sources */,
 				E283BF701CC8675C00925723 /* ViewController.swift in Sources */,
 				E283BF6E1CC8675C00925723 /* AppDelegate.swift in Sources */,
 				E22198AF1CC890B800F66E6D /* HanOkuRealm.swift in Sources */,
