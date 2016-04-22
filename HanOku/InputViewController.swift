@@ -54,24 +54,27 @@ class InputViewController: UIViewController {
         super.viewWillDisappear(animated)
     }
     
-    func dismissKeyboard() {
+    func dismissKeyboard() {    
         view.endEditing(true)
     }
     
     func setNotification(item: Item) {
         
+        
         // Cancelling if the same item has been already registered
+        /*
         for notification in UIApplication.sharedApplication().scheduledLocalNotifications! {
             if notification.userInfo!["id"] as! Int == item.id {
                 UIApplication.sharedApplication().cancelLocalNotification(notification)
                 break
             }
         }
+        */
         
         let notification = UILocalNotification()
         
         notification.fireDate = item.time
-        notification.repeatInterval = NSCalendarUnit.Minute
+        notification.repeatInterval = NSCalendarUnit.Minute // It should be .Day
         notification.timeZone = NSTimeZone.defaultTimeZone()
         notification.alertBody = "\(item.title)"
         notification.soundName = UILocalNotificationDefaultSoundName
