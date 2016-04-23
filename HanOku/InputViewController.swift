@@ -76,7 +76,7 @@ class InputViewController: UIViewController {
         notification.fireDate = item.time
         notification.repeatInterval = NSCalendarUnit.Minute // It should be .Day
         notification.timeZone = NSTimeZone.defaultTimeZone()
-        notification.alertBody = "\(item.title)"
+        notification.alertBody = "\(item.title) \n \(item.detail)"
         notification.soundName = UILocalNotificationDefaultSoundName
         notification.userInfo = ["id":item.id]
         UIApplication.sharedApplication().scheduleLocalNotification(notification)

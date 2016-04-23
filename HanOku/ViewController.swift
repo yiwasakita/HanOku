@@ -47,6 +47,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Setting values to the Cells
         let item = itemArray[indexPath.row]
         cell.textLabel?.text = item.title
+        cell.detailTextLabel?.text = item.detail
         
         return cell
     }

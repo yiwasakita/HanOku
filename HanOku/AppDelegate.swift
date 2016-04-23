@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If the notification is received while foreground
         
         if application.applicationState == UIApplicationState.Active {
-            let alertController = UIAlertController(title: "Memorized? 憶えた？", message: notification.alertBody, preferredStyle: .Alert)
+            let alertController = UIAlertController(title: "憶えた？", message: notification.alertBody, preferredStyle: .Alert)
             let defaultAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
             alertController.addAction(defaultAction)
             

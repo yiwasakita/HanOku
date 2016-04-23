@@ -62,11 +62,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8S0-z5-M9X">
-                        <barButtonItem key="leftBarButtonItem" title="Set Time" id="5e8-gN-edU">
-                            <connections>
-                                <segue destination="gfd-VK-3xZ" kind="show" identifier="timesetSegue" id="eOc-Ec-vIH"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zWj-dJ-bUX">
                             <connections>
                                 <segue destination="C6q-bN-W2n" kind="show" id="dgZ-AN-3Zo"/>
@@ -168,52 +163,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C3w-Mn-Zb8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1841" y="352"/>
-        </scene>
-        <!--Timeset View Controller-->
-        <scene sceneID="HP8-8R-ATV">
-            <objects>
-                <viewController id="gfd-VK-3xZ" customClass="TimesetViewController" customModule="HanOku" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="EKN-LH-lGC"/>
-                        <viewControllerLayoutGuide type="bottom" id="a4k-dB-dvl"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5ag-Jf-vcy">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert time アラート時刻設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dn-ne-v4e">
-                                <rect key="frame" x="20" y="74" width="560" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="f3Q-EE-dt4">
-                                <rect key="frame" x="20" y="105" width="560" height="216"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="b8T-Xb-rz4"/>
-                                </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="483024973.05808502">
-                                    <!--2016-04-22 13:36:13 +0000-->
-                                </date>
-                            </datePicker>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="f3Q-EE-dt4" firstAttribute="leading" secondItem="5ag-Jf-vcy" secondAttribute="leadingMargin" id="Cer-Lz-ykT"/>
-                            <constraint firstItem="f3Q-EE-dt4" firstAttribute="top" secondItem="7dn-ne-v4e" secondAttribute="bottom" constant="10" id="O1a-O9-MzG"/>
-                            <constraint firstItem="7dn-ne-v4e" firstAttribute="top" secondItem="EKN-LH-lGC" secondAttribute="bottom" constant="10" id="XiO-wx-cKW"/>
-                            <constraint firstItem="7dn-ne-v4e" firstAttribute="leading" secondItem="5ag-Jf-vcy" secondAttribute="leadingMargin" id="cL0-UZ-6CJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7dn-ne-v4e" secondAttribute="trailing" id="giT-Ao-rr1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="f3Q-EE-dt4" secondAttribute="trailing" id="ruw-D3-crt"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="myDatePicker" destination="f3Q-EE-dt4" id="EgO-TA-k66"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jBp-bq-DME" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1841" y="1045"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZN8-i1-SHZ">
